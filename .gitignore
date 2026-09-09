@@ -1,0 +1,66 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ---- Packaging / build ----
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+*.whl
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+ENV/
+
+# ---- uv ----
+# uv.lock IS committed for applications: it pins exact versions so a
+# reviewer's `uv sync` reproduces your environment exactly.
+# For a published library you would ignore it instead.
+.uv-cache/
+
+# ---- Tooling caches ----
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# ---- PyCharm / JetBrains ----
+.idea/
+
+# ---- OS junk ----
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ---- Secrets ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---- Generated data ----
+# This project generates multi-million-row CSVs. They are reproducible
+# from src/streaming_etl/data.py with a fixed seed — never commit them.
+data/
+*.csv
+*.parquet
+*.db
+*.sqlite3
+!tests/fixtures/*.csv
+
+# ---- Logs and benchmark output ----
+logs/
+*.log
+benchmarks/results/*.json
